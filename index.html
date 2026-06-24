@@ -479,7 +479,7 @@
   <div class="pdf-target" id="pdfTarget"></div>
   <canvas id="share-canvas" width="600" height="600"></canvas>
 
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://mori-homepage.pages.dev/shared/particles.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
   <script>
@@ -682,18 +682,8 @@
     cursorSpotlight.style.top = e.clientY + 'px';
   });
 
-  /* ── JS 07：粒子背景 ── */
-  particlesJS('particles-js', {
-    particles: {
-      number: { value: 40, density: { enable: true, value_area: 800 } },
-      color: { value: '#C4A96A' },
-      opacity: { value: 0.12, random: true },
-      size: { value: 1.5, random: true },
-      move: { enable: true, speed: 0.5, random: true, out_mode: 'out' },
-      line_linked: { enable: false }
-    },
-    interactivity: { events: { onhover: { enable: false } } }
-  });
+  /* ── JS 07：MoriParticles ── */
+  MoriParticles.init('quiz');
 
   /* ── JS 08：歡迎頁 ── */
   function pickSym(el) {
